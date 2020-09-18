@@ -7,10 +7,17 @@
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         </ul>
 
-        <form class="d-flex">
-          <input class="form-control mr-2" type="search" placeholder="Buscar película" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
+        <div class="d-flex">
+          <input #txtBuscar
+                 (keyup.enter)="buscarPelicula( txtBuscar.value )"
+                 class="form-control mr-2"
+                 type="search"
+                 placeholder="Buscar película"
+                 aria-label="Search">
+
+          <button (click)="buscarPelicula( txtBuscar.value )"
+                 class="btn btn-outline-success" type="submit">Buscar</button>
+        </div>
       </div>
     </div>
   </nav>

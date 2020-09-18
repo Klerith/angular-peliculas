@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PosterPipe } from './poster.pipe';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    PosterPipe
+  ],
+  exports: [
+    PosterPipe
+  ],
   imports: [
     CommonModule
   ]
